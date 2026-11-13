@@ -11,6 +11,11 @@ export function Footer() {
           <p className="font-semibold text-white">Explore</p>
           <ul className="mt-2 space-y-1">
             <li><Link href="/forums" className="hover:text-white">Policy &amp; Leadership Forums</Link></li>
+            <li><Link href="/keynotes" className="hover:text-white">Keynotes</Link></li>
+            <li><Link href="/events" className="hover:text-white">Events</Link></li>
+            <li><Link href="/shop" className="hover:text-white">Shop</Link></li>
+            <li><Link href="/about" className="hover:text-white">About</Link></li>
+            <li><Link href="/work-and-impact" className="hover:text-white">Work &amp; Impact</Link></li>
             <li><Link href="/forums#inquire" className="hover:text-white">Book Dr. Jones</Link></li>
           </ul>
         </div>

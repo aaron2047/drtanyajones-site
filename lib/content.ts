@@ -8,7 +8,6 @@ export const site = {
     "U.S. Army veteran",
     "Former Department of Defense professional",
     "Founder, Interactive Advocacy",
-    "President, NCVETBIZ",
     "Creator, GLOW Framework",
   ],
 };

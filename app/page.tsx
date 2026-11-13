@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="keynotes" className="bg-mist py-16">
+      <section className="bg-mist py-16">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-5 px-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-display text-3xl">Ready to convene?</h2>
