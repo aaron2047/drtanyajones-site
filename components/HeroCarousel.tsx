@@ -25,7 +25,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
       aria-roledescription="carousel" aria-label="Featured"
       onMouseEnter={() => setHold(true)} onMouseLeave={() => setHold(false)}
       onFocus={() => setHold(true)} onBlur={() => setHold(false)}
-      className="relative isolate min-h-[34rem] overflow-hidden bg-gov text-white md:min-h-[38rem]"
+      className="relative isolate h-[calc(100svh-2.5rem)] min-h-[34rem] w-full overflow-hidden bg-gov text-white"
     >
       {slides.map((s, n) => (
         <div key={s.title} role="group" aria-roledescription="slide" aria-label={`${n + 1} of ${slides.length}`} aria-hidden={n !== i}
@@ -33,8 +33,8 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
           <div className="absolute inset-0 -z-20 bg-gradient-to-br from-gov via-navy to-teal" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={s.image} alt="" loading={n === 0 ? "eager" : "lazy"} className="absolute inset-y-0 right-0 -z-10 h-full w-full object-cover object-right-top opacity-60 md:object-top md:opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-r from-gov via-gov/80 to-transparent md:via-gov/60 md:to-transparent" aria-hidden />
-          <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pb-20 pt-16">
+          <div className="absolute inset-0 bg-gradient-to-r from-gov/90 via-gov/40 to-transparent md:from-gov/85 md:via-gov/20" aria-hidden />
+          <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pb-24 pt-48">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">{s.eyebrow}</p>
             <h2 className="mt-4 max-w-2xl font-display text-4xl leading-tight md:text-6xl">{s.title}</h2>
             <p className="mt-5 max-w-xl text-lg text-white/85">{s.body}</p>

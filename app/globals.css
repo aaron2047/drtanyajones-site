@@ -7,3 +7,13 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 .focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .ticker-track { animation: ticker 45s linear infinite; }
+
+/* Home overlay header: white text on the video, transparent logo; solid-bar pages use the dark text and boxed logo. */
+.logo-light { display: none; }
+[data-overlay="true"] .logo-dark { display: none; }
+[data-overlay="true"] .logo-light { display: inline-block; }
+[data-overlay="true"] nav, [data-overlay="true"] nav ul { border-color: rgba(255,255,255,.35); }
+[data-overlay="true"] nav a { color: #fff; }
+[data-overlay="true"] nav a:hover { color: #d3af37; }
+[data-overlay="true"] nav ul ul a { color: #163234; }
+[data-overlay="true"] p.tagline { color: rgba(255,255,255,.85); }
