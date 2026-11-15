@@ -8,6 +8,7 @@ export const site = {
     "U.S. Army veteran",
     "Former Department of Defense professional",
     "Founder, Interactive Advocacy",
+    "Two-time elected President, North Carolina Veterans Business Association",
     "Creator, GLOW Framework",
   ],
 };
@@ -36,10 +37,11 @@ export const outcomes = [
 
 export const faqs = [
   { q: "Who hosts a Policy & Leadership Forum?", a: "Government bodies, international and intergovernmental organizations, universities, associations and institutions. [PLACEHOLDER: confirm host types.]" },
-  { q: "How far in advance should we reach out?", a: "[PLACEHOLDER: confirm lead time, e.g. 8 to 12 weeks for convenings.]" },
+  { q: "How far in advance should we reach out?", a: "Please submit at least six weeks ahead. This is the lead time on the current Interactive Advocacy request form. [PLACEHOLDER: confirm for forums.]" },
   { q: "Can Dr. Jones travel internationally?", a: "[PLACEHOLDER: confirm travel and virtual availability.]" },
   { q: "What are the speaking fees?", a: "[PLACEHOLDER: fee policy pending. Paid forum and keynote inquiries are routed separately from pro-bono requests.]" },
   { q: "What do you need from the host?", a: "A short brief on audience, goals, date and format. The inquiry form below captures this so we can reply with a proposal." },
+  { q: "Are pro-bono requests considered?", a: "Pro-bono engagements are considered subject to availability and team capacity, per the current Interactive Advocacy policy. [PLACEHOLDER: confirm for Dr. Jones.]" },
   { q: "Do you provide a one-sheet or press kit?", a: "[PLACEHOLDER: link to forum one-sheet and press kit once approved.]" },
 ];
 

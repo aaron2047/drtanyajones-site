@@ -17,6 +17,7 @@ export function Footer() {
             <li><Link href="/training#shop" className="hover:text-white">Shop &amp; Merch</Link></li>
             <li><Link href="/about" className="hover:text-white">About</Link></li>
             <li><Link href="/work-and-impact" className="hover:text-white">Work &amp; Impact</Link></li>
+            <li><Link href="/insights" className="hover:text-white">Insights</Link></li>
             <li><Link href="/forums#inquire" className="hover:text-white">Book Dr. Jones</Link></li>
           </ul>
         </div>
@@ -25,6 +26,11 @@ export function Footer() {
           <p className="mt-2">A.C.T© violence-prevention training is delivered through Interactive Advocacy.</p>
           <a href="https://interactiveadvocacy.com" rel="noopener" className="mt-2 inline-block underline hover:text-white">Visit Interactive Advocacy</a>
         </div>
+      </div>
+      <div className="border-t border-white/10 px-6 py-6 text-center text-sm">
+        <p className="font-semibold text-white">Stay informed</p>
+        <p className="mt-1 text-white/70">Newsletter signup is planned. Placeholder until the email service is chosen.</p>
+        <p className="mt-2 text-white/70">Add to Home Screen to install this site as an app.</p>
       </div>
       <p className="border-t border-white/10 px-6 py-4 text-center text-xs text-white/50">
         Preview build. Content marked Placeholder is not final. Year: {new Date().getFullYear()}

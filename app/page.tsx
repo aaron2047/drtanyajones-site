@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { VideoHero } from "@/components/VideoHero";
-import { heroImage } from "@/lib/hero";
 import { Placeholder } from "@/components/Placeholder";
 import { site } from "@/lib/content";
 
@@ -13,7 +12,7 @@ const paths = [
 export default function Home() {
   return (
     <>
-      <VideoHero image={heroImage()} eyebrow="Policy & Leadership Forums" title="Turning conversation into policy, and policy into safer communities." sub={site.tagline}>
+      <VideoHero image="/images/hero-home.jpg" eyebrow="Policy & Leadership Forums" title="Turning conversation into policy, and policy into safer communities." sub={site.tagline}>
         <Link href="/forums#inquire" className="rounded-full bg-brass px-6 py-3 font-semibold text-ink hover:bg-white focus-ring">Host a Forum</Link>
         <Link href="/forums" className="rounded-full border border-white/50 px-6 py-3 font-semibold hover:bg-white/10 focus-ring">See how forums work</Link>
       </VideoHero>
@@ -28,6 +27,31 @@ export default function Home() {
               <Link href={p.href} className="mt-5 font-semibold text-navy underline focus-ring">{p.cta}</Link>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section aria-label="Priorities" className="space-y-1 bg-white">
+        {[
+          { t: "Host a Policy & Leadership Forum", href: "/forums", img: "/images/hero-forums.jpg" },
+          { t: "Book a keynote or panel", href: "/keynotes", img: "/images/hero-home.jpg" },
+          { t: "Prevent violence with A.C.T© training", href: "/training", img: "/images/portrait-about.jpg" },
+        ].map((x) => (
+          <Link key={x.t} href={x.href} className="group relative flex h-64 items-end justify-end overflow-hidden bg-gov p-6 focus-ring md:h-80">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={x.img} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top opacity-70 transition group-hover:opacity-90" />
+            <span className="relative text-xs font-semibold uppercase tracking-[0.25em] text-white">{x.t} &rsaquo;</span>
+          </Link>
+        ))}
+        <p className="px-6 py-2 text-center text-xs text-ink/60"><Placeholder>Video panels pending</Placeholder> Stacked full-width video panels, modeled on whitehouse.gov priorities, replace these images when footage arrives.</p>
+      </section>
+
+      <section className="bg-brass/10 py-12" aria-labelledby="seen">
+        <div className="mx-auto max-w-6xl px-6 text-center">
+          <h2 id="seen" className="text-xs font-semibold uppercase tracking-[0.3em] text-gov">As seen on</h2>
+          <ul className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-2 font-display text-lg text-ink/70">
+            {["Fox News", "NBC", "CBS News", "ABC News", "iHeartRadio", "WHLF 95.3", "WOW", "Botswana Guardian", "The Sun", "Zondra TV"].map((m) => <li key={m}>{m}</li>)}
+          </ul>
+          <p className="mt-4 text-sm text-ink/60"><Placeholder>Logos, links and permission pending</Placeholder> Listed from the current site.</p>
         </div>
       </section>
 

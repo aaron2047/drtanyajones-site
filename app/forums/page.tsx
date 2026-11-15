@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { VideoHero } from "@/components/VideoHero";
-import { heroImage } from "@/lib/hero";
 import { Placeholder } from "@/components/Placeholder";
 import { Faq } from "@/components/Faq";
 import { InquiryForm } from "@/components/InquiryForm";
@@ -21,7 +20,7 @@ export default function Forums() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
-      <VideoHero image={heroImage()} eyebrow="Policy & Leadership Forums" title="Convenings that bridge grassroots groups and global policymakers." sub="Substantive, outcome-driven dialogue for hosts who need decisions, not just discussion.">
+      <VideoHero image="/images/hero-forums.jpg" eyebrow="Policy & Leadership Forums" title="Convenings that bridge grassroots groups and global policymakers." sub="Substantive, outcome-driven dialogue for hosts who need decisions, not just discussion.">
         <a href="#inquire" className="rounded-full bg-brass px-6 py-3 font-semibold text-ink hover:bg-white focus-ring">Request a Forum</a>
         <a href="#formats" className="rounded-full border border-white/50 px-6 py-3 font-semibold hover:bg-white/10 focus-ring">View formats</a>
       </VideoHero>
