@@ -23,15 +23,15 @@ export function InquiryForm({ defaultType = "forum" }: { defaultType?: string })
 
   if (status === "sent")
     return (
-      <div role="status" className="rounded-2xl border border-brass bg-white p-8">
+      <div role="status" className="rounded-sm border border-brass bg-white p-8">
         <h3 className="font-display text-2xl">Thank you. Your inquiry is in.</h3>
         <p className="mt-2 text-ink/80">A confirmation is on its way to your email. Dr. Jones&apos;s team will follow up with next steps and a discovery-call link.</p>
       </div>
     );
 
-  const field = "mt-1 w-full rounded-lg border border-ink/20 bg-white px-3 py-2 focus-ring";
+  const field = "mt-1 w-full rounded-sm border border-ink/20 bg-white px-3 py-2 focus-ring";
   return (
-    <form onSubmit={onSubmit} className="grid gap-5 rounded-2xl border border-ink/10 bg-white p-6 md:grid-cols-2 md:p-8" noValidate={false}>
+    <form onSubmit={onSubmit} className="grid gap-5 rounded-sm border border-ink/10 bg-white p-6 md:grid-cols-2 md:p-8" noValidate={false}>
       <label className="md:col-span-2 text-sm font-semibold">What are you inquiring about?
         <select name="type" required value={type} onChange={(e) => setType(e.target.value)} className={field}>
           {inquiryTypes.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}

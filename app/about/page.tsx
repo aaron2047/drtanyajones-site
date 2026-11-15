@@ -13,7 +13,7 @@ export default function About() {
           <p>She founded Interactive Advocacy and has advocated for veteran entrepreneurship and economic resilience through veteran business leadership.</p>
           <p className="flex flex-wrap items-center gap-3 text-base"><Placeholder>Pending</Placeholder> Final bio text, verified titles and awards, and the reach figure are added once Dr. Jones approves wording and sources.</p>
         </div>
-        <aside className="rounded-2xl border border-dashed border-brass bg-white p-5 text-sm">
+        <aside className="rounded-sm border border-dashed border-brass bg-white p-5 text-sm">
           <Placeholder>Portrait pending</Placeholder>
           <div className="mt-3 aspect-[4/5] rounded-xl bg-gradient-to-br from-navy to-ink" />
         </aside>

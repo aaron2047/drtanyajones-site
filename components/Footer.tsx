@@ -13,15 +13,16 @@ export function Footer() {
             <li><Link href="/forums" className="hover:text-white">Policy &amp; Leadership Forums</Link></li>
             <li><Link href="/keynotes" className="hover:text-white">Keynotes</Link></li>
             <li><Link href="/events" className="hover:text-white">Events</Link></li>
-            <li><Link href="/shop" className="hover:text-white">Shop</Link></li>
+            <li><Link href="/training" className="hover:text-white">Training</Link></li>
+            <li><Link href="/training#shop" className="hover:text-white">Shop &amp; Merch</Link></li>
             <li><Link href="/about" className="hover:text-white">About</Link></li>
             <li><Link href="/work-and-impact" className="hover:text-white">Work &amp; Impact</Link></li>
             <li><Link href="/forums#inquire" className="hover:text-white">Book Dr. Jones</Link></li>
           </ul>
         </div>
         <div className="text-sm">
-          <p className="font-semibold text-white">Training arm</p>
-          <p className="mt-2">Live theatrical violence-prevention training is offered through Interactive Advocacy.</p>
+          <p className="font-semibold text-white">Training division</p>
+          <p className="mt-2">A.C.T© violence-prevention training is delivered through Interactive Advocacy.</p>
           <a href="https://interactiveadvocacy.com" rel="noopener" className="mt-2 inline-block underline hover:text-white">Visit Interactive Advocacy</a>
         </div>
       </div>

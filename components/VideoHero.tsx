@@ -4,9 +4,9 @@ import { Placeholder } from "./Placeholder";
 
 // Poster-first hero: the LCP element is the poster/gradient, video loads after, and is skipped for
 // reduced-motion or data-saver visitors. Muted, looped, no autoplay with sound.
-export function VideoHero({ eyebrow, title, sub, children }: { eyebrow: string; title: string; sub: string; children?: React.ReactNode }) {
+export function VideoHero({ eyebrow, title, sub, image, children }: { eyebrow: string; title: string; sub: string; image?: string; children?: React.ReactNode }) {
   const src = process.env.NEXT_PUBLIC_HERO_VIDEO;
-  const poster = process.env.NEXT_PUBLIC_HERO_POSTER;
+  const poster = image ?? process.env.NEXT_PUBLIC_HERO_POSTER;
   const ref = useRef<HTMLVideoElement>(null);
   const [play, setPlay] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -23,7 +23,7 @@ export function VideoHero({ eyebrow, title, sub, children }: { eyebrow: string; 
   }
 
   return (
-    <section className="relative isolate flex min-h-[88vh] items-end overflow-hidden bg-navy text-white">
+    <section className="relative isolate flex min-h-[70vh] items-end overflow-hidden bg-navy text-white">
       <div
         className="absolute inset-0 -z-20 bg-gradient-to-br from-ink via-navy to-[#2a3f66]"
         style={poster ? { backgroundImage: `url(${poster})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
@@ -33,7 +33,7 @@ export function VideoHero({ eyebrow, title, sub, children }: { eyebrow: string; 
         <video ref={ref} className="absolute inset-0 -z-10 h-full w-full object-cover" src={src} poster={poster} autoPlay muted loop playsInline preload="metadata" aria-hidden />
       )}
       <div className="absolute inset-0 -z-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent" aria-hidden />
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-40">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-28">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">{eyebrow}</p>
         <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-6xl">{title}</h1>
         <p className="mt-5 max-w-2xl text-lg text-white/85">{sub}</p>

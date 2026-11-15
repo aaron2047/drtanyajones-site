@@ -1,6 +1,6 @@
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
   return (
-    <div className="divide-y divide-ink/10 rounded-2xl border border-ink/10 bg-white">
+    <div className="divide-y divide-ink/10 rounded-sm border border-ink/10 bg-white">
       {items.map((f) => (
         <details key={f.q} className="group p-5 open:bg-cream/60">
           <summary className="flex cursor-pointer list-none items-center justify-between font-semibold focus-ring">

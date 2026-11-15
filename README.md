@@ -16,3 +16,10 @@ Next.js 14 + Tailwind preview of the redesigned personal site (home + Policy & L
 ## Pages
 / (home), /forums, /keynotes, /events (calendar + auto-archive), /shop (2 placeholder products), /about, /work-and-impact.
 Event and product data live in `lib/events.ts` and `lib/products.ts` until the CMS and Shopify are connected.
+
+## Redesign draft (government-style)
+- Header: scrolling announcement strip (pausable on hover/focus, static for reduced motion), centered wordmark, centered menu, Training dropdown. Swap the wordmark for the logo image in `components/Header.tsx`.
+- Hero image: drop `public/hero.jpg` (or .webp/.png) and every hero uses it automatically.
+- `/training` = A.C.T© division with Shop & Merch (links to interactiveadvocacy.com) and a training quote form. `/shop` redirects there.
+- Installable app (PWA): manifest, icons and service worker included. Native App Store / Google Play builds would be a later wrapper (Capacitor).
+- Fonts: Source Serif 4 and Inter, self-hosted via @fontsource.

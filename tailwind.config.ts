@@ -3,10 +3,10 @@ const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      colors: { ink: "#0e1626", navy: "#14233d", brass: "#c79a3b", cream: "#f7f3ea", mist: "#e8e4d8" },
+      colors: { ink: "#0e1626", navy: "#14233d", brass: "#c79a3b", cream: "#f7f3ea", mist: "#e8e4d8", gov: "#0d132d" },
       fontFamily: {
-        display: ["Georgia", "Cambria", "Times New Roman", "serif"],
-        sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        display: ['"Source Serif 4 Variable"', "Georgia", "serif"],
+        sans: ['"Inter Variable"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },

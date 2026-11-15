@@ -26,7 +26,7 @@ export default function Events() {
           <ul className="mt-4 space-y-4">
             {upcoming.length === 0 && <li className="text-ink/70">No upcoming events are listed right now.</li>}
             {upcoming.map((e) => (
-              <li key={e.id} className="rounded-2xl border border-ink/10 bg-white p-5">
+              <li key={e.id} className="rounded-sm border border-ink/10 bg-white p-5">
                 <p className="text-sm font-semibold text-brass">{fmt(e.start)}</p>
                 <h3 className="mt-1 font-display text-lg">{e.title}</h3>
                 {e.location && <p className="mt-1 text-sm text-ink/70">{e.location}</p>}

@@ -1,9 +1,15 @@
+import "@fontsource-variable/inter";
+import "@fontsource-variable/source-serif-4";
 import "./globals.css";
+import { RegisterSW } from "@/components/RegisterSW";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
+  manifest: "/manifest.webmanifest",
+  icons: { icon: "/icons/icon-192.png", apple: "/icons/icon-192.png" },
+  themeColor: "#0d132d",
   title: "Dr. Tanya O. Jones | Policy & Leadership Forums and Keynote Speaker",
   description: "Leadership strategist and U.S. Army veteran convening policy and leadership forums for government, international and institutional hosts.",
 };
@@ -26,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <RegisterSW />
       </body>
     </html>
   );

@@ -13,9 +13,9 @@ export function MonthCalendar({ year, month, events }: { year: number; month: nu
     if (d.getFullYear() === year && d.getMonth() === month) byDay.set(d.getDate(), [...(byDay.get(d.getDate()) ?? []), e]);
   });
   return (
-    <div className="rounded-2xl border border-ink/10 bg-white p-4 md:p-6">
+    <div className="rounded-sm border border-ink/10 bg-white p-4 md:p-6">
       <h3 className="font-display text-2xl">{label}</h3>
-      <div role="grid" aria-label={label} className="mt-4 grid grid-cols-7 gap-px overflow-hidden rounded-lg bg-ink/10 text-sm">
+      <div role="grid" aria-label={label} className="mt-4 grid grid-cols-7 gap-px overflow-hidden rounded-sm bg-ink/10 text-sm">
         {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d) => <div key={d} className="bg-mist p-2 text-center text-xs font-semibold">{d}</div>)}
         {cells.map((d, i) => (
           <div key={i} className="min-h-[72px] bg-white p-1.5 md:min-h-[96px]">

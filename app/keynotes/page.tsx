@@ -18,7 +18,7 @@ export default function Keynotes() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <ul className="grid gap-6 md:grid-cols-2">
           {items.map((i) => (
-            <li key={i.t} className="rounded-2xl border border-ink/10 bg-white p-6">
+            <li key={i.t} className="rounded-sm border border-ink/10 bg-white p-6">
               <h2 className="font-display text-xl">{i.t}</h2>
               <p className="mt-2 text-ink/75">{i.d}</p>
               <p className="mt-3 flex items-center gap-3 text-sm"><Placeholder>Audience fit and outcomes pending</Placeholder>{i.href && <Link href={i.href} className="font-semibold underline">Learn more</Link>}</p>

@@ -5,3 +5,5 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { @apply bg-cream text-ink font-sans antialiased; }
 .focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-track { animation: ticker 45s linear infinite; }
