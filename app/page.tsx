@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { VideoHero } from "@/components/VideoHero";
+import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { Placeholder } from "@/components/Placeholder";
 import { site } from "@/lib/content";
 
@@ -9,13 +9,17 @@ const paths = [
   { title: "Schools, workplaces and institutions", body: "Proactive violence-prevention training through theatrical presentation and prevention tools.", href: "/training", cta: "Explore Training" },
 ];
 
+const slides: Slide[] = [
+  { eyebrow: "Policy & Leadership Forums", title: "Turning conversation into policy, and policy into safer communities.", body: site.tagline, cta: "Host a Forum", href: "/forums#inquire", image: "/images/hero-home.jpg" },
+  { eyebrow: "Keynotes, panels and workshops", title: "A voice built on resilience, service and justice.", body: "Leadership, governance and ethics for conferences, summits and executive conversations.", cta: "Book a keynote", href: "/keynotes", image: "/images/portrait-about.jpg" },
+  { eyebrow: "A.C.T© Training", title: "Actively create transformation.", body: "Theatrical violence-prevention training for military, schools, workplaces and public institutions.", cta: "Explore training", href: "/training", image: "/images/portrait-impact.jpg" },
+  { eyebrow: "Shop & Merch", title: "Tools and gear for the unstoppable bystander.", body: "Books, interactive training tools and Awareness Vibes apparel from Interactive Advocacy.", cta: "Shop now", href: "/training#shop", image: "/images/portrait-insights.jpg" },
+];
+
 export default function Home() {
   return (
     <>
-      <VideoHero image="/images/hero-home.jpg" eyebrow="Policy & Leadership Forums" title="Turning conversation into policy, and policy into safer communities." sub={site.tagline}>
-        <Link href="/forums#inquire" className="rounded-full bg-brass px-6 py-3 font-semibold text-ink hover:bg-white focus-ring">Host a Forum</Link>
-        <Link href="/forums" className="rounded-full border border-white/50 px-6 py-3 font-semibold hover:bg-white/10 focus-ring">See how forums work</Link>
-      </VideoHero>
+      <HeroCarousel slides={slides} />
 
       <section className="mx-auto max-w-6xl px-6 py-20" aria-labelledby="paths">
         <h2 id="paths" className="font-display text-3xl md:text-4xl">Who this is for</h2>
