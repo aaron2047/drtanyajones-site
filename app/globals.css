@@ -17,3 +17,19 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 [data-overlay="true"] nav a:hover { color: #d3af37; }
 [data-overlay="true"] nav ul ul a { color: #163234; }
 [data-overlay="true"] p.tagline { color: rgba(255,255,255,.85); }
+
+/* Hero camera moves, haze and light motes (active slide only; off for reduced motion) */
+.hero-kb{transform:scale(1.02);transform-origin:60% 50%;will-change:transform}
+.hero-kb[data-active="true"][data-kb="in"]{animation:kb-in 9s ease-out forwards}
+.hero-kb[data-active="true"][data-kb="pan"]{animation:kb-pan 9s ease-in-out forwards;transform-origin:50% 50%}
+.hero-kb[data-active="true"][data-kb="out"]{animation:kb-out 9s ease-out forwards}
+@keyframes kb-in{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,0)}}
+@keyframes kb-pan{from{transform:scale(1.12) translate(2%,0)}to{transform:scale(1.12) translate(-2%,0)}}
+@keyframes kb-out{from{transform:scale(1.12)}to{transform:scale(1.02)}}
+.hero-haze{position:absolute;inset:-10%;z-index:-10;pointer-events:none;opacity:.35;mix-blend-mode:screen;
+ background:radial-gradient(40% 30% at 30% 40%,rgba(255,255,255,.22),transparent 70%),radial-gradient(35% 28% at 75% 55%,rgba(211,175,55,.18),transparent 70%);animation:haze 22s ease-in-out infinite alternate}
+@keyframes haze{from{transform:translate(-3%,0) scale(1)}to{transform:translate(4%,-2%) scale(1.1)}}
+.hero-motes{position:absolute;inset:0;z-index:-10;pointer-events:none;overflow:hidden}
+.hero-motes span{position:absolute;bottom:-4%;border-radius:9999px;background:rgba(255,236,170,.8);box-shadow:0 0 8px 2px rgba(255,220,130,.5);opacity:0;animation:mote linear infinite}
+@keyframes mote{0%{transform:translate(0,0);opacity:0}15%{opacity:.8}85%{opacity:.5}100%{transform:translate(30px,-105vh);opacity:0}}
+@media (prefers-reduced-motion:reduce){.hero-kb,.hero-haze,.hero-motes span{animation:none!important}.hero-motes{display:none}}

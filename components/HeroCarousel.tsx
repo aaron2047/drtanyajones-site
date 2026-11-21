@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Placeholder } from "./Placeholder";
 
-export type Slide = { eyebrow: string; title: string; body: string; cta: string; href: string; image: string };
+export type Slide = { eyebrow: string; title: string; body: string; cta: string; href: string; image: string; pos?: string; kb?: "in" | "pan" | "out" };
 
 // Rotating hero modeled on the HighPoint banner: headline left, person right, outlined button, dots.
 // Auto-advances every 7s; pauses on hover/focus and for reduced-motion visitors. Slides are real
@@ -32,8 +32,10 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
           className={`absolute inset-0 transition-opacity duration-700 ${n === i ? "opacity-100" : "pointer-events-none opacity-0"}`}>
           <div className="absolute inset-0 -z-20 bg-gradient-to-br from-gov via-navy to-teal" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={s.image} alt="" loading={n === 0 ? "eager" : "lazy"} className="absolute inset-y-0 right-0 -z-10 h-full w-full object-cover object-right-top opacity-60 md:object-top md:opacity-100" />
-          <div className="absolute inset-0 bg-gradient-to-r from-gov/90 via-gov/40 to-transparent md:from-gov/85 md:via-gov/20" aria-hidden />
+          <img src={s.image} alt="" loading={n === 0 ? "eager" : "lazy"} data-kb={s.kb ?? "in"} data-active={n === i} style={{ objectPosition: s.pos ?? "right top" }} className="hero-kb absolute inset-0 -z-10 h-full w-full object-cover" />
+          <div className="hero-haze" aria-hidden />
+          <div className="hero-motes" aria-hidden>{Array.from({ length: 14 }).map((_, k) => <span key={k} style={{ left: `${(k * 37) % 100}%`, animationDelay: `${-(k * 1.7) % 14}s`, animationDuration: `${12 + (k % 5) * 3}s`, width: 2 + (k % 3), height: 2 + (k % 3) }} />)}</div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gov/85 via-gov/45 to-gov/10 md:from-gov/80 md:via-gov/15" aria-hidden />
           <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-center px-6 pb-24 pt-48">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">{s.eyebrow}</p>
             <h2 className="mt-4 max-w-2xl font-display text-4xl leading-tight md:text-6xl">{s.title}</h2>
@@ -49,7 +51,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
               className={`h-3 w-3 rounded-full border-2 border-white focus-ring ${n === i ? "bg-white" : "bg-transparent"}`} />
           ))}
         </div>
-        <p className="text-xs text-white/70"><Placeholder>Reel pending</Placeholder> Slides become short video loops when footage arrives.</p>
+        <p className="text-xs text-white/70"><Placeholder>AI-generated scenes, pending approval</Placeholder> Replaced by real footage when available.</p>
       </div>
     </section>
   );

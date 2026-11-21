@@ -10,10 +10,10 @@ const paths = [
 ];
 
 const slides: Slide[] = [
-  { eyebrow: "Policy & Leadership Forums", title: "Turning conversation into policy, and policy into safer communities.", body: site.tagline, cta: "Host a Forum", href: "/forums#inquire", image: "/images/hero-home.jpg" },
-  { eyebrow: "Keynotes, panels and workshops", title: "A voice built on resilience, service and justice.", body: "Leadership, governance and ethics for conferences, summits and executive conversations.", cta: "Book a keynote", href: "/keynotes", image: "/images/portrait-about.jpg" },
-  { eyebrow: "A.C.T© Training", title: "Actively create transformation.", body: "Theatrical violence-prevention training for military, schools, workplaces and public institutions.", cta: "Explore training", href: "/training", image: "/images/portrait-impact.jpg" },
-  { eyebrow: "Shop & Merch", title: "Tools and gear for the unstoppable bystander.", body: "Books, interactive training tools and Awareness Vibes apparel from Interactive Advocacy.", cta: "Shop now", href: "/training#shop", image: "/images/portrait-insights.jpg" },
+  { eyebrow: "Policy & Leadership Forums", title: "Turning conversation into policy, and policy into safer communities.", body: site.tagline, cta: "Host a Forum", href: "/forums#inquire", image: "/images/hero-wide.jpg", pos: "center", kb: "in" },
+  { eyebrow: "Keynotes, panels and workshops", title: "A voice built on resilience, service and justice.", body: "Leadership, governance and ethics for conferences, summits and executive conversations.", cta: "Book a keynote", href: "/keynotes", image: "/images/hero-podium.jpg", pos: "center", kb: "pan" },
+  { eyebrow: "A.C.T© Training", title: "Actively create transformation.", body: "Theatrical violence-prevention training for military, schools, workplaces and public institutions.", cta: "Explore training", href: "/training", image: "/images/hero-closeup.jpg", pos: "70% center", kb: "in" },
+  { eyebrow: "Shop & Merch", title: "Tools and gear for the unstoppable bystander.", body: "Books, interactive training tools and Awareness Vibes apparel from Interactive Advocacy.", cta: "Shop now", href: "/training#shop", image: "/images/portrait-insights.jpg", pos: "right top", kb: "out" },
 ];
 
 export default function Home() {
