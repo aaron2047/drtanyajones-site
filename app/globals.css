@@ -38,3 +38,11 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 [data-overlay="true"] .menu-btn { color: #fff; border-color: rgba(255,255,255,.5); }
 [data-overlay="true"] .lg\:hidden > div:first-child { border-color: rgba(255,255,255,.35); }
 [data-overlay="true"] .cart-btn { color: #fff; border-color: rgba(255,255,255,.5); }
+
+/* Coalition strip: one line, black and white, slow scroll */
+.coalition-logo { filter: grayscale(1) contrast(1.1); opacity: .7; transition: opacity .2s; }
+.coalition-logo:hover { opacity: 1; }
+.coalition-track { animation: coalition 60s linear infinite; }
+.coalition:hover .coalition-track, .coalition:focus-within .coalition-track, .coalition:focus .coalition-track { animation-play-state: paused; }
+@keyframes coalition { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .coalition { overflow-x: auto; } .coalition-track { animation: none; } .coalition-track > ul[aria-hidden] { display: none; } }

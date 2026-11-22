@@ -4,6 +4,7 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { products } from "@/lib/products";
 import Link from "next/link";
 import { Faq } from "@/components/Faq";
+import { CoalitionStrip } from "@/components/CoalitionStrip";
 import { dontJustStandThere as djst, programs, iaFaqs, toolStory } from "@/lib/programs";
 
 export const metadata: Metadata = {
@@ -67,6 +68,8 @@ export default function InteractiveAdvocacy() {
           <ul className="mt-4 flex flex-wrap gap-2">{audiences.map((a) => <li key={a} className="rounded-sm border border-navy/30 px-3 py-1 text-sm">{a}</li>)}</ul>
         </div>
       </section>
+
+      <CoalitionStrip />
 
       <section id="dont-just-stand-there" className="scroll-mt-8 bg-gov py-16 text-white">
         <div className="mx-auto max-w-6xl px-6">
@@ -208,19 +211,13 @@ export default function InteractiveAdvocacy() {
         <p className="mt-4 text-sm text-ink/70">Waiting-list form fields on the current site: package, purpose, timeline, video content, target audience, duration and format. Use the quote form below.</p>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2">
+      <section className="mx-auto max-w-6xl px-6 py-16">
         <div>
           <p className={kicker}>Professional speaking engagements</p>
           <h2 className={"mt-2 " + h2}>Keynote speaker · Panelist · Moderator · Facilitator</h2>
           <p className="mt-4 text-ink/80">Make an impact at your next organization-wide event with an Interactive Advocacy speaker as the keynote speaker, moderator, or panelist, with experience as advocates and survivors of trauma.</p>
           <p className="mt-3 text-ink/80">Please request a speaker at least six weeks before your event. Submitting the form does not confirm a booking.</p>
           <Link href="#inquire" className="mt-5 inline-block font-semibold text-navy underline focus-ring">Request a speaker</Link>
-        </div>
-        <div className="rounded-sm border border-dashed border-brass bg-white p-6">
-          <p className={kicker}>Coalition</p>
-          <p className="mt-3 text-ink/80">Backed by a strong and diverse nationwide coalition of organizations and institutions committed to empowering, engaging and advocating for change.</p>
-          <p className="mt-4"><Placeholder>Logos need written permission</Placeholder></p>
-          <p className="mt-2 text-sm text-ink/70">Military and agency seals imply endorsement, so each logo goes up with written permission and a named partner.</p>
         </div>
       </section>
 
