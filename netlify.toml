@@ -1,9 +1,0 @@
-# Netlify: connect the GitHub repo and this file sets up the build. Netlify detects Next.js and runs the
-# full site (pages, inquiry API, cart API). Remove NEXT_PUBLIC_DEMO once forms and the store are wired up.
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NEXT_PUBLIC_DEMO = "1"
