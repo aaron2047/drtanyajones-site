@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroCarousel, type Slide } from "@/components/HeroCarousel";
 import { Placeholder } from "@/components/Placeholder";
 import { site } from "@/lib/content";
+import { UpcomingList } from "@/components/UpcomingList";
 
 const paths = [
   { title: "Government and international hosts", body: "Policy & Leadership Forums that connect grassroots voices with policymakers and intergovernmental bodies.", href: "/forums", cta: "Explore Forums" },
@@ -30,6 +31,17 @@ export default function Home() {
               <Link href={p.href} className="mt-5 font-semibold text-navy underline focus-ring">{p.cta}</Link>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white py-16" aria-label="Upcoming events">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[1fr_1.4fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brass">Calendar</p>
+            <p className="mt-3 font-display text-3xl">See Dr. Jones in person.</p>
+            <p className="mt-3 text-ink/75">Upcoming engagements, listed by date. Past events move to Recent appearances on their own.</p>
+          </div>
+          <UpcomingList limit={3} />
         </div>
       </section>
 
