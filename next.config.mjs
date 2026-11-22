@@ -8,9 +8,9 @@ const iaMap = [
   ["/team/tanya-jones", "/about"],
   ["/book-online", "/interactive-advocacy#inquire"],
   ["/speaker-request", "/forums#inquire"], // confirm
-  ["/shop", "/interactive-advocacy#shop"], // confirm
-  ["/store", "/interactive-advocacy#shop"], // confirm
-  ["/product-page/:slug", "/interactive-advocacy#shop"], // confirm (Wix product URLs)
+  ["/shop", "/interactive-advocacy/shop"], // confirm
+  ["/store", "/interactive-advocacy/shop"], // confirm
+  ["/product-page/:slug", "/interactive-advocacy/shop/:slug"], // confirm Wix product slugs match the Shopify handles
   ["/contact", "/forums#inquire"], // confirm
   ["/videos", "/interactive-advocacy"], // confirm, until the Watch page exists
   ["/faq", "/forums#faq"], // confirm
@@ -21,7 +21,7 @@ export default {
   async redirects() {
     return [
       { source: "/training", destination: "/interactive-advocacy", permanent: true },
-      { source: "/shop", destination: "/interactive-advocacy#shop", permanent: true },
+      { source: "/shop", destination: "/interactive-advocacy/shop", permanent: true },
       ...iaMap.map(([source, destination]) => ({ source, has: ia, destination: "https://www.drtanyaojones.com" + destination, permanent: true })),
       { source: "/:path*", has: ia, destination: "https://www.drtanyaojones.com/interactive-advocacy", permanent: true },
     ];

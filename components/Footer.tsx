@@ -14,7 +14,7 @@ export function Footer() {
             <li><Link href="/keynotes" className="hover:text-white">Keynotes</Link></li>
             <li><Link href="/events" className="hover:text-white">Events</Link></li>
             <li><Link href="/interactive-advocacy" className="hover:text-white">Interactive Advocacy</Link></li>
-            <li><Link href="/interactive-advocacy#shop" className="hover:text-white">Shop &amp; Merch</Link></li>
+            <li><Link href="/interactive-advocacy/shop" className="hover:text-white">Shop &amp; Merch</Link></li>
             <li><Link href="/about" className="hover:text-white">About</Link></li>
             <li><Link href="/work-and-impact" className="hover:text-white">Work &amp; Impact</Link></li>
             <li><Link href="/insights" className="hover:text-white">Insights</Link></li>

@@ -14,7 +14,7 @@ const nav = [
 ];
 const training = [
   { href: "/interactive-advocacy", label: "A.C.T© Training" },
-  { href: "/interactive-advocacy#shop", label: "Shop & Merch" },
+  { href: "/interactive-advocacy/shop", label: "Shop & Merch" },
   { href: "/interactive-advocacy#inquire", label: "Request a training quote" },
 ];
 
@@ -25,7 +25,7 @@ export function Header() {
     { label: "Host a Policy & Leadership Forum", href: "/forums#inquire" },
     { label: "Keynotes and panels", href: "/keynotes" },
     { label: "A.C.T© violence-prevention training", href: "/interactive-advocacy" },
-    { label: "Shop and merch", href: "/interactive-advocacy#shop" },
+    { label: "Shop and merch", href: "/interactive-advocacy/shop" },
     { label: "Book Dr. Jones", href: "/forums#inquire" },
   ];
   return (
