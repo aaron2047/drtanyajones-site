@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { CartButton } from "./Cart";
 
 type Item = { href: string; label: string };
 
@@ -33,7 +34,8 @@ export function MobileMenu({ nav, ia }: { nav: Item[]; ia: Item[] }) {
           <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden><path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" strokeWidth="2" /></svg>
           Menu
         </button>
-        <Link href="/forums#inquire" className="flex min-h-[44px] items-center rounded-sm bg-teal px-5 text-sm font-semibold uppercase tracking-wider !text-white focus-ring">Book</Link>
+        <div className="flex gap-2"><CartButton />
+        <Link href="/forums#inquire" className="flex min-h-[44px] items-center rounded-sm bg-teal px-5 text-sm font-semibold uppercase tracking-wider !text-white focus-ring">Book</Link></div>
       </div>
       {open && (
         <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" className="fixed inset-0 z-50 overflow-y-auto bg-gov px-6 pb-10 pt-5 text-left">

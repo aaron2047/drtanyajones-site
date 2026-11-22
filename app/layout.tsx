@@ -4,6 +4,7 @@ import "./globals.css";
 import { RegisterSW } from "@/components/RegisterSW";
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
+import { CartProvider } from "@/components/Cart";
 import { Footer } from "@/components/Footer";
 
 export const viewport: Viewport = { themeColor: "#163234" };
@@ -28,12 +29,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <CartProvider>
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-3">Skip to content</a>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         <Header />
         <main id="main">{children}</main>
         <Footer />
         <RegisterSW />
+        </CartProvider>
       </body>
     </html>
   );

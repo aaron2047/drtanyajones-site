@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { inquiryTypes } from "@/lib/content";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -8,12 +8,17 @@ export function InquiryForm({ defaultType = "forum" }: { defaultType?: string })
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [type, setType] = useState(defaultType);
+  const [message, setMessage] = useState("");
+  // An order request from the cart (preview mode) arrives pre-filled.
+  useEffect(() => { try { const o = sessionStorage.getItem("order-request"); if (o) { setMessage(o); setType("training"); sessionStorage.removeItem("order-request"); } } catch { /* ignore */ } }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending"); setError("");
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     try {
+      // Presentation demo: no server behind the form.
+      if (process.env.NEXT_PUBLIC_DEMO) { await new Promise((r) => setTimeout(r, 600)); setStatus("sent"); return; }
       const res = await fetch("/api/inquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || "Something went wrong.");
@@ -60,7 +65,7 @@ export function InquiryForm({ defaultType = "forum" }: { defaultType?: string })
         <label className="text-sm font-semibold">Budget range (optional)<input name="budget" className={field} /></label>
       )}
       <label className="md:col-span-2 text-sm font-semibold">Goals for the event
-        <textarea name="message" rows={4} required className={field} />
+        <textarea name="message" rows={4} required value={message} onChange={(e) => setMessage(e.target.value)} className={field} />
       </label>
       <label className="hidden" aria-hidden>Leave blank<input name="website" tabIndex={-1} autoComplete="off" /></label>
       <div className="md:col-span-2 flex flex-wrap items-center gap-4">

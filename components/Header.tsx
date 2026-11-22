@@ -3,6 +3,7 @@ import { Ticker, type TickerItem } from "./Ticker";
 import { splitEvents } from "@/lib/events";
 import { HeaderShell } from "./HeaderShell";
 import { MobileMenu } from "./MobileMenu";
+import { CartButton } from "./Cart";
 
 const nav = [
   { href: "/forums", label: "Forums" },
@@ -54,6 +55,7 @@ export function Header() {
                 ))}
               </ul>
             </li>
+            <li><CartButton /></li>
             <li><Link href="/forums#inquire" className="rounded-sm bg-teal px-4 py-2 text-white hover:bg-brass hover:text-gov focus-ring">Book</Link></li>
           </ul>
         </nav>

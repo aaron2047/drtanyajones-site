@@ -37,3 +37,4 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 /* Mobile menu button over the home hero */
 [data-overlay="true"] .menu-btn { color: #fff; border-color: rgba(255,255,255,.5); }
 [data-overlay="true"] .lg\:hidden > div:first-child { border-color: rgba(255,255,255,.35); }
+[data-overlay="true"] .cart-btn { color: #fff; border-color: rgba(255,255,255,.5); }

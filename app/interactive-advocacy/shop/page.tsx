@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getProducts, shopifyOn, type ShopProduct } from "@/lib/commerce";
+import { getProducts, provider, type ShopProduct } from "@/lib/commerce";
 import { Placeholder } from "@/components/Placeholder";
+import { OrderComplete } from "@/components/OrderComplete";
 
 export const revalidate = 300;
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default async function Shop() {
           <ul className="mt-6 flex flex-wrap gap-2 text-sm">{groups.map((g) => <li key={g.kind}><a href={`#${g.kind.replace(" ", "-").toLowerCase()}`} className="inline-block rounded-sm border border-white/40 px-3 py-1 hover:bg-white/10 focus-ring">{g.title}</a></li>)}</ul>
         </div>
       </section>
-      {!shopifyOn && <p className="mx-auto mt-6 flex max-w-6xl flex-wrap items-center gap-3 px-6 text-sm text-ink/70"><Placeholder>Preview catalog</Placeholder> Prices from the current store, Nov 2026. Checkout turns on when the Shopify store is connected.</p>}
+      {provider === "local" && <p className="mx-auto mt-6 flex max-w-6xl flex-wrap items-center gap-3 px-6 text-sm text-ink/70"><Placeholder>Preview catalog</Placeholder> Prices from the current store, Nov 2026. Checkout turns on when the store is connected.</p>}
       {groups.map((g) => {
         const list = all.filter((p) => p.kind === g.kind);
         if (!list.length) return null;
@@ -57,6 +58,9 @@ export default async function Shop() {
           </section>
         );
       })}
+      {(() => { const rest = all.filter((p) => !groups.some((g) => g.kind === p.kind)); return rest.length ? (
+        <section className="mx-auto max-w-6xl px-6 py-10"><h2 className="font-display text-3xl text-gov">More</h2><ul className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">{rest.map((p) => <Card key={p.slug} p={p} />)}</ul></section>) : null; })()}
+      <OrderComplete />
       <section className="border-t border-ink/10 bg-cream py-10">
         <div className="mx-auto max-w-6xl px-6 text-ink/80">
           <h2 className="font-display text-2xl">Ordering for an organization?</h2>
