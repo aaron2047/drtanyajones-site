@@ -68,7 +68,7 @@ export default function Forums() {
         </div>
       </section>
 
-      <section className="bg-mist py-20">
+      <section id="faq" className="scroll-mt-8 bg-mist py-20">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="font-display text-3xl">Host FAQ</h2>
           <div className="mt-8"><Faq items={faqs} /></div>

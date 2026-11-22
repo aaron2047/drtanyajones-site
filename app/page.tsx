@@ -7,7 +7,7 @@ import { UpcomingList } from "@/components/UpcomingList";
 const paths = [
   { title: "Government and international hosts", body: "Policy & Leadership Forums that connect grassroots voices with policymakers and intergovernmental bodies.", href: "/forums", cta: "Explore Forums" },
   { title: "Military and veteran communities", body: "Safety, accountability and lasting cultural change, led by a U.S. Army veteran.", href: "/forums#topics", cta: "See topics" },
-  { title: "Schools, workplaces and institutions", body: "Proactive violence-prevention training through theatrical presentation and prevention tools.", href: "/training", cta: "Explore Training" },
+  { title: "Schools, workplaces and institutions", body: "Proactive violence-prevention training through theatrical presentation and prevention tools.", href: "/interactive-advocacy", cta: "Explore Interactive Advocacy" },
 ];
 
 const slides: Slide[] = [
@@ -49,7 +49,7 @@ export default function Home() {
         {[
           { t: "Host a Policy & Leadership Forum", href: "/forums", img: "/images/hero-forums.jpg" },
           { t: "Book a keynote or panel", href: "/keynotes", img: "/images/hero-home.jpg" },
-          { t: "Prevent violence with A.C.T© training", href: "/training", img: "/images/portrait-about.jpg" },
+          { t: "Prevent violence with A.C.T© training", href: "/interactive-advocacy", img: "/images/portrait-about.jpg" },
         ].map((x) => (
           <Link key={x.t} href={x.href} className="group relative flex h-64 items-end justify-end overflow-hidden bg-gov p-6 focus-ring md:h-80">
             {/* eslint-disable-next-line @next/next/no-img-element */}

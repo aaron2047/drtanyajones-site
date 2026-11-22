@@ -5,8 +5,8 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "A.C.T© Training | Dr. Tanya O. Jones",
-  description: "Violence-prevention training through theatrical presentation and prevention tools, delivered through Interactive Advocacy.",
+  title: "Interactive Advocacy: A.C.T© Training and Shop",
+  description: "Interactive Advocacy, founded by Dr. Tanya O. Jones: A.C.T© violence-prevention training, training tools, books and merch.",
 };
 
 const pillars = [
@@ -16,10 +16,20 @@ const pillars = [
 ];
 const audiences = ["Military and veteran communities", "Schools", "Workplaces", "Public institutions"];
 
-export default function Training() {
+const org = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Interactive Advocacy",
+  url: "https://www.drtanyaojones.com/interactive-advocacy",
+  founder: { "@type": "Person", name: "Dr. Tanya O. Jones", url: "https://www.drtanyaojones.com/about" },
+  description: "Violence-prevention training through theatrical presentations, teaching and prevention tools.",
+};
+
+export default function InteractiveAdvocacy() {
   return (
     <>
-      <PageHero eyebrow="Training division" title="A.C.T©: actively create transformation." sub="Engaging, empowering and transforming individuals and communities to prevent violence. Delivered through Interactive Advocacy." />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      <PageHero eyebrow="Interactive Advocacy" title="A.C.T©: actively create transformation." sub="Dr. Jones's company for violence-prevention training. Engaging, empowering and transforming individuals and communities to prevent violence." />
       <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="font-display text-3xl">What it is</h2>
         <ul className="mt-8 grid gap-6 md:grid-cols-3">
@@ -32,7 +42,7 @@ export default function Training() {
       <section id="shop" className="scroll-mt-8 bg-mist py-16">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="font-display text-3xl">Shop &amp; Merch</h2>
-          <p className="mt-2 max-w-2xl text-ink/75">THIS IS NOT A GAME: a series of interactive training tools designed to increase critical thinking and problem solving skills and to integrate fun into your training environment. Books and advocacy gear are sold on interactiveadvocacy.com.</p>
+          <p className="mt-2 max-w-2xl text-ink/75">THIS IS NOT A GAME: a series of interactive training tools designed to increase critical thinking and problem solving skills and to integrate fun into your training environment. Books, training tools and advocacy gear, all in one place.</p>
           <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
               <li key={p.slug} className="flex flex-col overflow-hidden rounded-sm border border-ink/10 bg-white">

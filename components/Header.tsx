@@ -12,9 +12,9 @@ const nav = [
   { href: "/insights", label: "Insights" },
 ];
 const training = [
-  { href: "/training", label: "A.C.T© Training" },
-  { href: "/training#shop", label: "Shop & Merch" },
-  { href: "https://interactiveadvocacy.com", label: "Interactive Advocacy" },
+  { href: "/interactive-advocacy", label: "A.C.T© Training" },
+  { href: "/interactive-advocacy#shop", label: "Shop & Merch" },
+  { href: "/interactive-advocacy#inquire", label: "Request a training quote" },
 ];
 
 export function Header() {
@@ -23,8 +23,8 @@ export function Header() {
     ...(next ? [{ label: `Next: ${next.title}, ${new Date(next.start).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "America/New_York" })}`, href: "/events" }] : []),
     { label: "Host a Policy & Leadership Forum", href: "/forums#inquire" },
     { label: "Keynotes and panels", href: "/keynotes" },
-    { label: "A.C.T© violence-prevention training", href: "/training" },
-    { label: "Shop and merch", href: "/training#shop" },
+    { label: "A.C.T© violence-prevention training", href: "/interactive-advocacy" },
+    { label: "Shop and merch", href: "/interactive-advocacy#shop" },
     { label: "Book Dr. Jones", href: "/forums#inquire" },
   ];
   return (
@@ -41,7 +41,7 @@ export function Header() {
           <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-1 py-3 text-sm font-semibold uppercase tracking-wider text-gov">
             {nav.map((n) => <li key={n.href}><Link href={n.href} className="py-2 hover:text-teal focus-ring">{n.label}</Link></li>)}
             <li className="group relative">
-              <Link href="/training" className="py-2 hover:text-teal focus-ring">Training</Link>
+              <Link href="/interactive-advocacy" className="py-2 hover:text-teal focus-ring">Interactive Advocacy</Link>
               <ul className="invisible absolute left-1/2 top-full z-30 w-56 -translate-x-1/2 border border-ink/10 bg-white py-2 text-left opacity-0 shadow-lg transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
                 {training.map((t) => (
                   <li key={t.href}>

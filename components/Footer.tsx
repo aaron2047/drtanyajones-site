@@ -13,8 +13,8 @@ export function Footer() {
             <li><Link href="/forums" className="hover:text-white">Policy &amp; Leadership Forums</Link></li>
             <li><Link href="/keynotes" className="hover:text-white">Keynotes</Link></li>
             <li><Link href="/events" className="hover:text-white">Events</Link></li>
-            <li><Link href="/training" className="hover:text-white">Training</Link></li>
-            <li><Link href="/training#shop" className="hover:text-white">Shop &amp; Merch</Link></li>
+            <li><Link href="/interactive-advocacy" className="hover:text-white">Interactive Advocacy</Link></li>
+            <li><Link href="/interactive-advocacy#shop" className="hover:text-white">Shop &amp; Merch</Link></li>
             <li><Link href="/about" className="hover:text-white">About</Link></li>
             <li><Link href="/work-and-impact" className="hover:text-white">Work &amp; Impact</Link></li>
             <li><Link href="/insights" className="hover:text-white">Insights</Link></li>
@@ -22,9 +22,9 @@ export function Footer() {
           </ul>
         </div>
         <div className="text-sm">
-          <p className="font-semibold text-white">Training division</p>
-          <p className="mt-2">A.C.T© violence-prevention training is delivered through Interactive Advocacy.</p>
-          <a href="https://interactiveadvocacy.com" rel="noopener" className="mt-2 inline-block underline hover:text-white">Visit Interactive Advocacy</a>
+          <p className="font-semibold text-white">Interactive Advocacy</p>
+          <p className="mt-2">Dr. Jones&apos;s company for A.C.T© violence-prevention training, training tools, books and merch.</p>
+          <Link href="/interactive-advocacy#inquire" className="mt-2 inline-block underline hover:text-white">Request a training quote</Link>
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-6 text-center text-sm">

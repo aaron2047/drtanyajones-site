@@ -20,7 +20,7 @@ const personSchema = {
   name: "Dr. Tanya O. Jones",
   jobTitle: "Leadership strategist and keynote speaker",
   url: "https://drtanyaojones.com",
-  founder: { "@type": "Organization", name: "Interactive Advocacy", url: "https://interactiveadvocacy.com" },
+  worksFor: { "@type": "Organization", name: "Interactive Advocacy", url: "https://www.drtanyaojones.com/interactive-advocacy" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -27,7 +27,7 @@ const person = {
   jobTitle: "Leadership strategist and speaker",
   description: "Leadership strategist, humanitarian advocate and U.S. Army veteran.",
   url: "https://www.drtanyaojones.com/about",
-  worksFor: { "@type": "Organization", name: "Interactive Advocacy", url: "https://www.interactiveadvocacy.com" },
+  worksFor: { "@type": "Organization", name: "Interactive Advocacy", url: "https://www.drtanyaojones.com/interactive-advocacy" },
   memberOf: { "@type": "Organization", name: "North Carolina Veterans Business Association" },
 };
 
@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="font-display text-2xl text-gov">Who is Dr. Tanya O. Jones?</h2>
           <p>Dr. Tanya O. Jones is a leadership strategist, humanitarian advocate, and creator of the GLOW Framework — a philosophy designed to help individuals and institutions grow through adversity, lead with compassion, own their story, and become warriors for change.</p>
           <p>Through keynote speaking, executive masterclasses, and global initiatives, Dr. Jones partners with institutional leaders across government, corporate, academic, and community sectors to advance resilience, ethical leadership, and measurable cultural transformation.</p>
-          <p>A U.S. Army Veteran and former Department of Defense professional, she brings deep experience in federal service and institutional systems. She is the Founder and Chief Executive Officer of <Link href="/training" className="underline">Interactive Advocacy</Link>, where her immersive, evidence-informed programs have reached more than 80,000 individuals nationally and internationally.</p>
+          <p>A U.S. Army Veteran and former Department of Defense professional, she brings deep experience in federal service and institutional systems. She is the Founder and Chief Executive Officer of <Link href="/interactive-advocacy" className="underline">Interactive Advocacy</Link>, where her immersive, evidence-informed programs have reached more than 80,000 individuals nationally and internationally.</p>
           <p>Dr. Jones also serves as the two-time elected President of the North Carolina Veterans Business Association, advancing veteran entrepreneurship and economic resilience. Her leadership and humanitarian impact have been recognized through her appointment as a United Nations Peacekeeping Ambassador and as a recipient of the Presidential Lifetime Achievement Award.</p>
           <p>An award-winning speaker and author, Dr. Jones continues to champion people-centered leadership and global impact through the GLOW Framework.</p>
           <p className="flex flex-wrap items-center gap-3 text-base"><Placeholder>Verify before launch</Placeholder> Her wording, unchanged. Three items need a source: 80,000 (her Interactive Advocacy bio says 50,000), &quot;United Nations Peacekeeping Ambassador&quot; (elsewhere &quot;Ambassador for Peace&quot;; this also decides the &quot;Amb.&quot; prefix), and the Presidential Lifetime Achievement Award. GLOW wording is on hold.</p>
