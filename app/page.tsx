@@ -12,7 +12,7 @@ const paths = [
 const slides: Slide[] = [
   { eyebrow: "Who we are", title: "A U.S. Army veteran turning lived experience into leadership.", body: "Global thought leader in governance and humanity. Speaker, author and founder of Interactive Advocacy.", cta: "Meet Dr. Jones", href: "/about", image: "/images/hero-closeup.jpg", pos: "70% center", kb: "in" },
   { eyebrow: "What we do", title: "Turning conversation into policy, and policy into safer communities.", body: "Policy & Leadership Forums, keynotes and A.C.T\u00a9 violence-prevention training.", cta: "Host a Forum", href: "/forums#inquire", image: "/images/hero-wide.jpg", pos: "center", kb: "in" },
-  { eyebrow: "Who we serve", title: "For the people and institutions committed to lasting change.", body: "Governments and intergovernmental bodies, military and veteran communities, schools, workplaces and public institutions.", cta: "Find your path", href: "#paths", image: "/images/hero-podium.jpg", pos: "center", kb: "pan" },
+  { eyebrow: "Who we serve", title: "For the people and institutions committed to lasting change.", body: "Governments and intergovernmental bodies, military and veteran communities, schools, workplaces and public institutions.", cta: "Find your path", href: "#paths", image: "/images/hero-podium.jpg", pos: "center", kb: "pan", fx: false },
 ];
 
 export default function Home() {
