@@ -49,6 +49,8 @@ export const inquiryTypes = [
   { value: "forum", label: "Policy & Leadership Forum" },
   { value: "keynote", label: "Keynote or panel" },
   { value: "training", label: "Training quote (Interactive Advocacy)" },
+  { value: "performance", label: "Live stage performance (Don't Just Stand There!)" },
+  { value: "iaspeaker", label: "Interactive Advocacy speaker" },
   { value: "probono", label: "Pro-bono request" },
   { value: "other", label: "Something else" },
 ] as const;

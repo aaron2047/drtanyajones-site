@@ -4,6 +4,8 @@ const ROUTES: Record<string, string | undefined> = {
   forum: process.env.INQUIRY_TO_FORUM,
   keynote: process.env.INQUIRY_TO_KEYNOTE,
   training: process.env.INQUIRY_TO_TRAINING,
+  performance: process.env.INQUIRY_TO_TRAINING,
+  iaspeaker: process.env.INQUIRY_TO_TRAINING,
   probono: process.env.INQUIRY_TO_PROBONO,
   other: process.env.INQUIRY_TO_OTHER,
 };

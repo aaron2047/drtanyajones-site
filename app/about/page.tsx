@@ -9,13 +9,20 @@ export const metadata: Metadata = {
 };
 
 // Listed on her current site. Each needs a source link (program page, photo or certificate) before launch.
+const memberships = [
+  "President, North Carolina Veterans Business Association (NCVETBIZ)",
+  "Collaborative partner and member, Annual Hawaii International Summit Planning Committee, Institute of Violence, Abuse, and Trauma (IVAT)",
+  "Member, AWHPI Global Foundation",
+  "Member, AWLO (Charlotte Chapter)",
+];
+
 const honors = [
-  "Presidential Lifetime Achievement Award, February 2024",
-  "Global Icon, First Ladies Forum Economic Summit, Doha, April 2024",
+  "Presidential Lifetime Achievement Award, February 2024, signed by former President Joe Biden",
+  "Global Icon, First Ladies Forum Economic Summit, Doha, Qatar, April 2024",
   "Leadership Award, Pan-African American Leaders Awards (PAALA), October 2024",
   "Global Icon, Women's Economic Summit, Dubai, March 2023",
-  "Chase Your Dreams Human Trafficking Awareness Award of Distinction, 2022",
-  "Humanitarian Honoree certificate, Houston Community College Board of Trustees",
+  "Chase Your Dreams Human Trafficking Awareness Award of Distinction, presented by Nissi Network and the Women of AT&T, 2022",
+  "Certificate of Recognition as a Humanitarian Honoree, Houston Community College Board of Trustees, 2022",
 ];
 
 // Only facts both of her sites agree on go into structured data. Titles and numbers still in question stay out.
@@ -46,8 +53,20 @@ export default function About() {
           <p>An award-winning speaker and author, Dr. Jones continues to champion people-centered leadership and global impact through the GLOW Framework.</p>
           <p className="flex flex-wrap items-center gap-3 text-base"><Placeholder>Verify before launch</Placeholder> Her wording, unchanged. Three items need a source: 80,000 (her Interactive Advocacy bio says 50,000), &quot;United Nations Peacekeeping Ambassador&quot; (elsewhere &quot;Ambassador for Peace&quot;; this also decides the &quot;Amb.&quot; prefix), and the Presidential Lifetime Achievement Award. GLOW wording is on hold.</p>
 
+          <h2 className="pt-4 font-display text-2xl text-gov">Her story</h2>
+          <p>Tanya O. Jones&apos; story is one of resilience, strength, and unwavering determination. Her journey from trauma to triumph began with isolation, but it was in that solitude that she discovered the power of creative expression. Through art, writing, and storytelling, she found her voice and transformed her pain into a catalyst for change. As an Army veteran, her experiences have shaped her perspective and fueled her passion for making a difference.</p>
+          <p>Tanya is not just a survivor; she is a thriver. Her personal journey, shaped by her military experiences, is a testament to the power of resilience and self-discovery. She believes in the innate potential of every individual to make a difference, and she urges others to join her in creating a world where violence has no place.</p>
+
           <h2 className="pt-4 font-display text-2xl text-gov">Federal service</h2>
-          <p>She has held positions within the Department of Defense and the U.S. Armed Forces, including Assistant Adjudicator, Assistant Inspector General, Sexual Assault Response Coordinator, Senior-Level Special Emphasis Program Manager, Equal Opportunity Program Manager, EEO, and Diversity &amp; Inclusion Specialist. She has also served as a Legislative Assistant at the Maryland General Assembly.</p>
+          <p>She has held positions within the Department of Defense and the U.S. Armed Forces, including Assistant Adjudicator, Assistant Inspector General, Sexual Assault Response Coordinator, Senior-Level Special Emphasis Program Manager, Equal Opportunity Program Manager, EEO, and Diversity &amp; Inclusion Specialist. She has also served as a Legislative Assistant at the Maryland General Assembly. She holds degrees in Political Science, Human Rights, and Genocide.</p>
+          <p className="flex flex-wrap items-center gap-3 text-base"><Placeholder>Pending</Placeholder> Degree titles and institutions.</p>
+
+          <h2 className="pt-4 font-display text-2xl text-gov">Global advocacy</h2>
+          <p>Dr. Jones holds Special Consultative Status with the United Nations Economic and Social Council (ECOSOC) and was conferred as an Ambassador for Peace on February 4, 2025, aligning her work with the UN Sustainable Development Goals 2030.</p>
+          <p className="flex flex-wrap items-center gap-3 text-base"><Placeholder>Verify</Placeholder> Wording from her Interactive Advocacy bio. Confirm the conferring body, and whether the status belongs to her or to an organization, before launch.</p>
+
+          <h2 className="pt-4 font-display text-2xl text-gov">Memberships</h2>
+          <ul className="list-disc space-y-1 pl-6 text-base">{memberships.map((m) => <li key={m}>{m}</li>)}</ul>
 
           <h2 className="pt-4 font-display text-2xl text-gov">Recognition</h2>
           <ul className="list-disc space-y-1 pl-6 text-base">{honors.map((h) => <li key={h}>{h}</li>)}</ul>
