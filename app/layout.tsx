@@ -10,6 +10,8 @@ import { Footer } from "@/components/Footer";
 export const viewport: Viewport = { themeColor: "#163234" };
 
 export const metadata: Metadata = {
+  // Previews stay out of search results so they never compete with the real site.
+  ...(process.env.NEXT_PUBLIC_DEMO ? { robots: { index: false, follow: false } } : {}),
   manifest: "/manifest.webmanifest",
   icons: { icon: "/icons/icon-192.png", apple: "/icons/icon-192.png" },
   title: "Dr. Tanya O. Jones | Policy & Leadership Forums and Keynote Speaker",
