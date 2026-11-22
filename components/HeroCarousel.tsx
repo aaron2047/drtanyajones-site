@@ -51,7 +51,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
               className={`h-3 w-3 rounded-full border-2 border-white focus-ring ${n === i ? "bg-white" : "bg-transparent"}`} />
           ))}
         </div>
-        <p className="text-xs text-white/70"><Placeholder>AI-generated scenes, pending approval</Placeholder> Replaced by real footage when available.</p>
+        <p className="px-6 text-center text-xs text-white/70"><Placeholder>AI-generated scenes, pending approval</Placeholder> Replaced by real footage when available.</p>
       </div>
     </section>
   );

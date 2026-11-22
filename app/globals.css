@@ -33,3 +33,7 @@ body { @apply bg-cream text-ink font-sans antialiased; }
 .hero-motes span{position:absolute;bottom:-4%;border-radius:9999px;background:rgba(255,236,170,.8);box-shadow:0 0 8px 2px rgba(255,220,130,.5);opacity:0;animation:mote linear infinite}
 @keyframes mote{0%{transform:translate(0,0);opacity:0}15%{opacity:.8}85%{opacity:.5}100%{transform:translate(30px,-105vh);opacity:0}}
 @media (prefers-reduced-motion:reduce){.hero-kb,.hero-haze,.hero-motes span{animation:none!important}.hero-motes{display:none}}
+
+/* Mobile menu button over the home hero */
+[data-overlay="true"] .menu-btn { color: #fff; border-color: rgba(255,255,255,.5); }
+[data-overlay="true"] .lg\:hidden > div:first-child { border-color: rgba(255,255,255,.35); }
