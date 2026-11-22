@@ -36,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <RegisterSW />
+          {process.env.NEXT_PUBLIC_DEMO && <p className="fixed bottom-3 left-3 z-40 rounded-sm bg-gov/90 px-3 py-1.5 text-xs font-semibold text-white shadow">Presentation demo · forms and checkout are simulated</p>}
         </CartProvider>
       </body>
     </html>
