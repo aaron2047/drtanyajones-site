@@ -26,7 +26,7 @@ const org = {
   "@type": "Organization",
   name: "Interactive Advocacy",
   url: "https://www.drtanyaojones.com/interactive-advocacy",
-  logo: "https://www.drtanyaojones.com/images/ia-logo.png",
+  logo: "https://www.drtanyaojones.com/images/ia-logo-full.png",
   founder: { "@type": "Person", name: "Dr. Tanya O. Jones", url: "https://www.drtanyaojones.com/about" },
   description: "A national violence-prevention organization delivering trauma-informed education, advocacy training, and culture-shifting tools.",
 };
@@ -51,9 +51,9 @@ export default function InteractiveAdvocacy() {
               <Link href="#dont-just-stand-there" className="rounded-sm border border-white/60 px-6 py-3 font-semibold text-white hover:bg-white/10 focus-ring">Book a live stage performance</Link>
             </div>
           </div>
-          {/* Small copy from the current site. Replace with the original logo file. */}
+          {/* Interactive Advocacy logo, black background removed so it sits on the banner. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/ia-logo.png" alt="Interactive Advocacy logo" width={184} height={100} className="hidden rounded-sm md:block" />
+          <img src="/images/ia-logo-full.png" alt="Interactive Advocacy logo" width={381} height={352} className="order-first h-auto w-36 md:order-none md:w-60" />
         </div>
       </section>
 
