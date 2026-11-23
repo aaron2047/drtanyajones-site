@@ -1,25 +1,38 @@
-# Dr. Tanya O. Jones: site preview
+# Dr. Tanya O. Jones: website redesign
 
-Next.js 14 + Tailwind preview of the redesigned personal site (home + Policy & Leadership Forums).
+Next.js 14 + Tailwind build of drtanyaojones.com, with Interactive Advocacy as a section of the site ("a Dr. Tanya O. Jones company").
 
-## Run
-    npm install
-    cp .env.example .env.local
-    npm run dev
+**Presentation demo:** https://aaron2047.github.io/drtanyajones-site/ (forms and checkout are simulated; hidden from search engines).
 
-## Status
-- Content marked **Placeholder** is not verified. See the Digital Presence Review, section 07 and "What we need from you".
-- GLOW framework intentionally not built yet (audit questions 8 to 12 open).
-- Inquiry API routes by type via `INQUIRY_TO_*`; logs to console without a Resend key.
-- Hero video via `NEXT_PUBLIC_HERO_VIDEO` / `NEXT_PUBLIC_HERO_POSTER`.
+## Run locally
+
+```
+npm install
+cp .env.example .env.local
+npm run dev
+```
 
 ## Pages
-/ (home), /forums, /keynotes, /events (calendar + auto-archive), /shop (2 placeholder products), /about, /work-and-impact.
-Event and product data live in `lib/events.ts` and `lib/products.ts` until the CMS and Shopify are connected.
 
-## Redesign draft (government-style)
-- Header: scrolling announcement strip (pausable on hover/focus, static for reduced motion), centered wordmark, centered menu, Training dropdown. Swap the wordmark for the logo image in `components/Header.tsx`.
-- Hero image: drop `public/images/hero-*.jpg (explicit paths per page)` (or .webp/.png) and every hero uses it automatically.
-- `/training` = A.C.T© division with Shop & Merch (links to interactiveadvocacy.com) and a training quote form. `/shop` redirects there.
-- Installable app (PWA): manifest, icons and service worker included. Native App Store / Google Play builds would be a later wrapper (Capacitor).
-- Fonts: Source Serif 4 and Inter, self-hosted via @fontsource.
+| Route | What it is |
+| --- | --- |
+| `/` | Three-slide banner (who we are, what we do, who we serve), upcoming events, audience paths |
+| `/forums`, `/keynotes` | Policy & Leadership Forums and speaking formats, each with an inquiry form |
+| `/events` | Dated list by month; past events move to Recent appearances automatically |
+| `/about`, `/work-and-impact`, `/insights` | Her bio, focus areas and writing |
+| `/interactive-advocacy` | The company section: programs, Don't Just Stand There! Series©, coalition, FAQ, procurement, request form |
+| `/interactive-advocacy/<program>` | One page per training program |
+| `/interactive-advocacy/shop` and `/shop/<product>` | Shop, product pages with photo viewer, slide-out cart |
+
+## Store
+
+`COMMERCE_PROVIDER` / `NEXT_PUBLIC_COMMERCE` choose the store: `wix` (Interactive Advocacy's existing Wix Store through Wix Headless, the plan), `shopify` (alternative), or empty for the local preview catalog in `lib/products.ts`. See `.env.example`.
+
+## Deploys
+
+- `.github/workflows/demo.yml` builds the static presentation demo (`scripts/build-demo.mjs`) and publishes it to GitHub Pages on every push to `main`. Pages source must be set to **GitHub Actions**.
+- `scripts/build-preview.py` turns the same build into the one-page preview used on claude.ai.
+
+## Status
+
+Content marked **Placeholder** is not verified yet; see the session summary and the Digital Presence Review. GLOW Framework is on hold. Redirects from interactiveadvocacy.com are in `next.config.mjs`; some old Wix addresses are marked "confirm".
