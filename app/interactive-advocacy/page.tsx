@@ -51,9 +51,9 @@ export default function InteractiveAdvocacy() {
               <Link href="#dont-just-stand-there" className="rounded-sm border border-white/60 px-6 py-3 font-semibold text-white hover:bg-white/10 focus-ring">Book a live stage performance</Link>
             </div>
           </div>
-          {/* Interactive Advocacy logo, black background removed so it sits on the banner. */}
+          {/* Interactive Advocacy mark (rings only; the name is in the header and the headline). */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/ia-logo-full.png" alt="Interactive Advocacy logo" width={381} height={352} className="order-first h-auto w-36 md:order-none md:w-60" />
+          <img src="/images/ia-logo-mark.png" alt="" width={306} height={314} className="order-first h-auto w-28 md:order-none md:w-56" />
         </div>
       </section>
 

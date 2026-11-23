@@ -47,6 +47,7 @@ def parts(doc):
 
 home_head, _, footer = parts(pages["home"])
 plain_head, _, _ = parts(pages["about"])
+ia_head, _, _ = parts(pages["interactive-advocacy"])
 titles = {n: html.unescape(re.search(r"<title>(.*?)</title>", d).group(1)) for n, d in pages.items()}
 
 sections = []
@@ -68,7 +69,7 @@ page = f"""<!DOCTYPE html>
 <title>Dr. Tanya O. Jones site preview</title><link rel="stylesheet" href="site.css">
 <style>[data-page][hidden]{{display:none}} .pv-panel a{{color:#fff}}</style></head>
 <body>
-<div id="hdr-home" hidden>{rewrite(home_head)}</div><div id="hdr-plain" hidden>{rewrite(plain_head)}</div>
+<div id="hdr-home" hidden>{rewrite(home_head)}</div><div id="hdr-plain" hidden>{rewrite(plain_head)}</div><div id="hdr-ia" hidden>{rewrite(ia_head)}</div>
 <div id="hdr"></div>
 <main id="main">{''.join(sections)}</main>
 {rewrite(footer)}
