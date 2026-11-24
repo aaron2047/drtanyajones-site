@@ -14,6 +14,8 @@ export const metadata: Metadata = {
 
 const audiences = ["Military and veteran communities", "Schools", "Workplaces", "Public institutions"];
 // The four colors of the Interactive Advocacy logo, in her words.
+// "A beacon of hope" section (the four logo colors). Hidden for now; set to true to bring it back.
+const SHOW_LOGO_COLORS = false;
 const colors = [
   { name: "Teal", means: "Sexual assault", hex: "#2ad2c9" },
   { name: "Purple", means: "Domestic violence", hex: "#7b3fa0" },
@@ -115,6 +117,7 @@ export default function InteractiveAdvocacy() {
         </div>
       </section>
 
+      {SHOW_LOGO_COLORS && (
       <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1fr_1fr]">
         <div>
           <p className={kicker}>A beacon of hope</p>
@@ -130,6 +133,7 @@ export default function InteractiveAdvocacy() {
           ))}
         </ul>
       </section>
+      )}
 
       <section className="bg-cream py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[260px_1fr]">
