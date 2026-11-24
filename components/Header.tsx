@@ -16,6 +16,7 @@ const nav = [
 ];
 const training = [
   { href: "/interactive-advocacy", label: "A.C.T© Training" },
+  { href: "/interactive-advocacy/team", label: "Our team" },
   { href: "/interactive-advocacy/shop", label: "Shop & Merch" },
   { href: "/interactive-advocacy#inquire", label: "Request a training quote" },
 ];

@@ -144,7 +144,7 @@ export default function InteractiveAdvocacy() {
             <h2 className={"mt-2 " + h2}>Redefining training through storytelling</h2>
             <p className="mt-4 text-ink/80">Dr. Tanya O. Jones has revolutionized the approach to violence prevention training. Her company blends storytelling, lived experiences, drama, comedy, and audience engagement to create a training experience beyond traditional methods. Her storytelling, rooted in her own personal journey, challenges preconceived notions and inspires individuals to Actively Create Transformation (A.C.T©). Tanya has trained over 50 thousand individuals.</p>
             <p className="mt-3 flex flex-wrap items-center gap-3 text-sm text-ink/70"><Placeholder>Verify</Placeholder> This site says 50 thousand; her personal bio says 80,000. Use one figure on both pages.</p>
-            <Link href="/about" className="mt-5 inline-block font-semibold text-navy underline focus-ring">Read her full bio</Link>
+            <div className="mt-5 flex flex-wrap gap-6"><Link href="/about" className="font-semibold text-navy underline focus-ring">Read her full bio</Link><Link href="/interactive-advocacy/team" className="font-semibold text-navy underline focus-ring">Meet the team</Link></div>
           </div>
         </div>
       </section>
