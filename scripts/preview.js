@@ -10,7 +10,7 @@
     if (!sec) return false;
     if (name !== current) {
       $$("[data-page]").forEach((s) => (s.hidden = s !== sec));
-      hdr.innerHTML = $(name === "home" ? "#hdr-home" : /^(interactive-advocacy|shop|program-)/.test(name) ? "#hdr-ia" : "#hdr-plain").innerHTML;
+      hdr.innerHTML = $(name === "home" ? "#hdr-home" : /^(interactive-advocacy|shop|program-|ia-team)/.test(name) ? "#hdr-ia" : "#hdr-plain").innerHTML;
       current = name;
       document.title = TITLES[name] || document.title;
       wireHeader();

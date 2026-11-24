@@ -17,7 +17,7 @@ def name_for(path):
     if parts[0] == "interactive-advocacy":
         if len(parts) == 1: return "interactive-advocacy"
         if parts[1] == "shop": return "shop" if len(parts) == 2 else "shop-" + parts[2]
-        return "program-" + parts[1]
+        return "ia-team" if parts[1] == "team" else "program-" + parts[1]
     return parts[0]
 
 pages = {}
